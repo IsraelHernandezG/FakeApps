@@ -2,17 +2,55 @@
 <html lang="es">
 <head>
     <title>Fake Apps</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet" type="text/css">
 </head>
 
-<div class="container">
+<div class="jumbotron text-center">
     <h1>Fake App DataBase</h1>
 </div>
 <div class="container">
-    <p>Una base de datos de aplicaciones falsas para todo tipo de tareas y proyectos escolares, libre de derechos para ser usadas en cualquier lugar y ocasión.</p>
-    <p>La base de datos esta conformada por 5 campos: el nombre de la Aplicación, el nombre del Desarrollador, la fecha en que se liberó, la compañía creadora o patrocinadora y la ultima versión liberada.</p>
+    <div class="row">
+        <div class="col-lg-4">
+            <p>
+                <div class="caption">Una base de datos abierta de aplicaciones falsas para todo tipo de tareas y proyectos escolares, libre de derechos para ser usadas en cualquier lugar y ocasión, adem{as se invita a la comunidad para que participe en este proyecto y haga crecer la base de datos.</div>
+		<img src="images/apps_1.png">
+            </p>
+        </div>
 
-    <p>
-       <button type="submit">Buscar</button>
-    </p>   
+        <div class="col-lg-4">
+            <p>
+                <div class="caption">La base de datos esta conformada por 5 campos: el nombre de la Aplicación, el nombre del Desarrollador, la fecha en que se liberó, la compañía creadora o patrocinadora y la ultima versión liberada.</div>
+                <img src="images/appstore.png">
+            </p>
+        </div>
+	 <div class="col-lg-4">
+		<p>
+		<div class="caption">Ver registros</div>
+		</p> <p>
+	        <button type="submit">Buscar</button>
+	    	</p>   
+
+		<p>
+                <div class="caption">Ingresa un nuevo registro</div>
+		</p> <p>
+                <input type="text" placeholder="App Name" name="name" >
+                <input type="text" placeholder="App Developer" name="developer">
+		</p> <p>
+		<input type="text" placeholder="Release Date" name="date" >
+		<input type="text" placeholder="Company Name" name="company" >
+		</p> <p>
+		<input type="text" placeholder="App Version" name="version" >
+		</p> <p>
+                <button type="submit">Ingresar</button>
+		</p> 
+
+            
+        </div>
+
+    
 </div>
 </html>

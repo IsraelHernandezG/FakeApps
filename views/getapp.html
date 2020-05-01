@@ -9,6 +9,12 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet" type="text/css">
 </head>
 
+<nav class="navbar navbar-dark navbar-static-top navbar-expand-md">
+    <div class="container">
+        </button> <a class="navbar-brand" href="/">Home</a>
+    </div>
+</nav>
+
 <div class="jumbotron text-center">
     <h1>Fake App DataBase</h1>
 </div>
@@ -20,7 +26,7 @@
 		<img src="/images/apps_1.png">
             </p>
         </div>
-
+	
         <div class="col-lg-4">
             <p>
                 <div class="caption">La base de datos esta conformada por 5 campos: el nombre de la Aplicación, el nombre del Desarrollador, la fecha en que se liberó, la compañía creadora o patrocinadora y la ultima versión liberada.</div>
@@ -29,28 +35,16 @@
         </div>
 	 <div class="col-lg-4">
 		<p>
-		<form action="/apps/getapp" method="get">
-		<div class="caption">Ver registros</div>
-		</p> <p>
-	        <button type="submit">Buscar</button>
-		</form>
-	    	</p>   
-
-		<p>
-		<form action="/apps/addapp" method="post">
-                <div class="caption">Ingresa un nuevo registro (* Campo obligatorio)</div>
-		</p> <p>
-                <input type="text" placeholder="App Name*" name="name" >
-                <input type="text" placeholder="App Developer*" name="developer">
-		</p> <p>
-		<input type="text" placeholder="Release Date" name="releasedate" >
-		<input type="text" placeholder="Company Name" name="company" >
-		</p> <p>
-		<input type="text" placeholder="App Version" name="version" >
-		</p> <p>
-                <button type="submit">Ingresar</button>
-		</form>
-		</p>  
+	       <div class="container">Elementos:</div>
+	       <ul><% apps.forEach(function(app) { %>
+	       <p>ID: <%= app.id %><br>
+		Nombre: <%= app.name %><br>
+		Desarrollador: <%= app.developer %><br>
+		Fecha de liberación: <%= app.releasedate %><br>
+		Compañía: <%= app.company %><br>
+		Versión: <%= app.version %></p>
+	       <% }); %></ul>
+	    </p> 	
         </div>
 </div>
 </html>
